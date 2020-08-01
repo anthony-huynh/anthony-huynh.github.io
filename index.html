@@ -3,10 +3,16 @@
   <head>
     <title>
       Anthony Huynh
+      
+      <!--fullpage.js-->
+      <link rel="stylesheet" type="text/css" href="fullpage.css" />
+      <script src="vendors/easings.min.js"></script>
+      <script type="text/javascript" src="fullpage.js"></script>
+
     </title>
   </head>
   <body>
-    
+   <!--previous layout 
     <h1 style="font-family:Arial, Helvetica, sans-serif;text-align: center;">about me:</h1>
 
    
@@ -14,7 +20,25 @@
     <p style="font-family:Arial, Helvetica, sans-serif;text-align: center;">I am a computer science student at UC Davis</p>
     <p style="font-family:Arial, Helvetica, sans-serif;text-align: center;">email me at anthuynh [at] ucdavis.edu :)</p>
     <p style="font-family:Arial, Helvetica, sans-serif;text-align: center;">Take a look at my <a href="/flappybird">Flappy Bird game</a></p>
+   -->
+   <div id="fullpage">
+    <div class="section">Hi, my name is Anthony Huynh!</div>
+    <div class="section">I am a third-year CS student at UC Davis.</div>
+    <div class="section">Contact me at anthuynh [at] ucdavis [dot] edu</div>
+    <div class="section">Take a look at my <a href="/flappybird">Flappy Bird remake</a>!</div>
+  </div>
 
+
+  <!-- fullpage.js stuff-->
+  <script type="text/javascript" src="dist/fullpage.js"></script>
+  <script type="text/javascript">
+	var myFullpage = new fullpage('#fullpage', {
+      anchors: ['greeting','about','contact','projects'],
+      sectionsColor: ['white', '#B5E5F5', '#EFC2FF', '#F4FFAD'],
+      scrollingSpeed: 550,
+      animateAnchor:false
+  });
+  </script>
 
   </body>
 </html>
